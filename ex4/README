@@ -1,0 +1,13 @@
+arikzil, lirang12
+Ariel Zilbershtyein (315314799), Liran Golan (311121073)
+EX: 4
+
+FILES:
+MapReduceFramework.cpp -- The main file of the mapreduce framework
+README.md -- This file
+Makefile -- Builds the libVirtualMemory.a library
+
+REMARKS:
+None
+
+ANSWERS:

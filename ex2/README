@@ -1,0 +1,62 @@
+arikzil, lirang12
+Ariel Zilbershtyein (315314799), Liran Golan (311121073)
+EX: 2
+
+FILES:
+Thread.h      -- a class representing a thread
+Thread.cpp    -- The implementation of Thread.h
+Uthreads.h    -- A user thread librarry
+Uthreads.cpp  -- The implementation of threads library
+README        -- current file
+MakeFile      -- the makefile of the project
+
+REMARKS:
+None
+QUESTIONS:
+1.Describe one general use of user-level threads and explain why user-level threads are a
+  reasonable choice for your example.
+
+2.Google’s Chrome browser creates a new process for each tab. What are the advantages and
+  disadvantages of creating the new process (instead of creating kernel-level thread)?
+  (2.5 pts)
+3.Interrupts and signals:
+a.  Open an application (for example, “Shotwell” on one of the CS computers). Use the “ps -A”
+    command to extract the application’s pid (process ID).
+b. Open a shell and type “kill pid”
+c. Explain which interrupts and signals are involved during the command execution, what
+   triggered them and who should handle them. In your answer refer to the keyboard, OS,
+   shell and the application you just killed
+4. What is the difference between ‘real’ and ‘virtual’ time? Give one example of using each (2.5 pts).
+ANSWERS:
+1.
+    for example in a video player we have the main thread handling UI and playing the video is segments
+    while having other threads downloading the segments from a remote server.
+    Using multiple User-level threads are a reasonable choice unlike having only a single thread as they allow
+    watching a movie while it is not fully loaded.
+    Also as creating thread is faster then a process the total waiting time for the user is a lot shorter ,
+    when using threads and not process to handle multiple tasks.
+2.
+   Advantages:
+   The executing operating in one tab would not cause disruption to the performance of other tabs.
+   Also the communication is more secure.If for example a website will crash in one tab
+   it would not happen in the second one.
+
+   Disadvantages:
+   The time it takes to switch from one running thread to another is long.
+   Also it can be not efficient as same sources can be loaded multiple times
+
+3.
+    After writting "kill <pid>" and pressing enter in the terminal hardware interrupts are sents to the cpu with the
+    appropriate key code (by the keyboard use) .
+    Then, the linux shell makes a system call to the process with the SIGTERM signal.
+    This means that a specific signal is captured by a process and the process quits unconditionally.
+
+4.  virtual time -
+    the time spent by the process in user mode measured by the CPU.
+    For example:
+    when a certain process has 2 threads.virtual time can be used to measured how long one of the threads
+    was executing.As executing threads  can change the time in the real world is different than the one
+    measured by the runtime of the thread.
+    time a process has been running (by the amount of time
+    real time - the actual elapsed time.
+    For example:on the windows operating systems real time is used to schedule     system update alerts

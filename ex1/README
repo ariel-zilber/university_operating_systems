@@ -1,0 +1,30 @@
+arikzil, lirang12
+Ariel Zilbershtyein (315314799), Liran Golan (311121073)
+EX: 1
+
+FILES:
+osm.cpp -- a file implementing the functions per the osm.h
+README --  current file
+MakeFile -- the makefile of the project
+MeasurementsResults.png -- the
+
+REMARKS:
+None
+
+ANSWERS:
+Q1:
+In short:
+  the program takes a single parameter and prints:
+CSE_USER+"\nIf you haven't read the course guidelines yet --- do it right now!\n"+USER_INPUT
+where: CSE_USER   = the Aquarium CS user name
+       USER_INPUT = the provided parameter
+
+The program works in a manner similar to the following:
+step 1) If the number of argument is not 1 go to step 2 else go to step 4
+step 2) prints the message "Error. The program should receive a single argument. Exiting."
+step 3) If the program exit succesfully print " : Success"
+step 4) Create a folder "Welcome"
+step 5) Create a folder "Welcome/To" if has permission else print "Internal Error (1)! Inform the OS-team\n: Permission denied\n"
+step 6) redo step 5 but with file "OS2020"
+step 7) attemps to the file OS2020:CSE_USER+"\nIf you haven't read the course guidelines yet --- do it right now!\n"+USER_INPUT
+step 8) exit program
